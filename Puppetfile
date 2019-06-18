@@ -8,6 +8,9 @@ mod "puppetlabs/concat",      '2.2.1'
 mod "puppet/hiera",           '2.4.0'
 mod 'puppetlabs-dsc',         '1.9.2'
 mod 'puppetlabs-sqlserver',   '2.5.0'
+mod 'puppetlabs-reboot',      '2.1.2'
+mod 'puppetlabs-powershell',  '2.3.0'
+mod 'virtualdesktopdevops-sqlserveralwayson', '2.0.0'
 
 # Modules from Github using various references
 # Further examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
