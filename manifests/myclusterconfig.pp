@@ -1,4 +1,4 @@
-class myclusterconfig inherits clusterconfig {
+class myclusterconfig inherits sqlserveralwayson::clusterconfig {
   
   if ( $role == 'primary' ) {
     #Failover cluster creation
