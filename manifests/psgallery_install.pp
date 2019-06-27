@@ -28,5 +28,11 @@ package { 'PowerShellGet':
   source   => 'PSGallery',
 }
 
+package { 'xActiveDirectory':
+  ensure   => latest,
+  provider => 'windowspowershell',
+  source   => 'PSGallery',
+}
+
 }
 
