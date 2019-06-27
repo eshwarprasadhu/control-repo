@@ -1,4 +1,4 @@
-class myserviceaccounts inherits  {
+class myserviceaccounts inherits sqlserveralwayson::serviceaccounts {
 
 	#SQL service account creation (Active Directory)
 	dsc_xaduser{'SvcSQLAccount':
