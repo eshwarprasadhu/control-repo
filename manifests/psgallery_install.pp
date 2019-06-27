@@ -22,5 +22,11 @@ package { 'Pester':
   source   => 'PSGallery',
 }
 
+package { 'PowerShellGet':
+  ensure   => latest,
+  provider => 'windowspowershell',
+  source   => 'PSGallery',
+}
+
 }
 
