@@ -5,7 +5,7 @@ class myclusterconfig inherits sqlserveralwayson::clusterconfig {
     dsc_xcluster{'CreateFailoverCluster19':
       dsc_name => $clusterName,
       dsc_staticipaddress => $clusterIP,
-      dsc_domainadministratorcredential => undef
+      dsc_domainadministratorcredential => ''
     }
 
     #File share whitness configuration
@@ -28,7 +28,7 @@ class myclusterconfig inherits sqlserveralwayson::clusterconfig {
     dsc_xcluster{'JoinCluster19':
       dsc_name => $clusterName,
       dsc_staticipaddress => $clusterIP,
-      dsc_domainadministratorcredential => undef,
+      dsc_domainadministratorcredential => '',
       require => Dsc_xwaitforcluster['SecondaryReplicaWaitForCluster']
     }
   }
