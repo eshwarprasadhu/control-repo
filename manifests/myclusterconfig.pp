@@ -2,7 +2,7 @@ class myclusterconfig inherits sqlserveralwayson::clusterconfig {
   
   if ( $role == 'primary' ) {
     #Failover cluster creation
-    dsc_xcluster{'CreateFailoverCluster':
+    dsc_xcluster{'CustomCreateFailoverCluster':
       dsc_name => $clusterName,
       dsc_staticipaddress => $clusterIP,
       dsc_domainadministratorcredential => ''
@@ -10,7 +10,7 @@ class myclusterconfig inherits sqlserveralwayson::clusterconfig {
 
     #File share whitness configuration
     #Warning, bug https://github.com/PowerShell/xFailOverCluster/issues/35 on Windows 2016
-    dsc_xclusterquorum{'SetQuorumToNodeAndDiskMajority':
+    dsc_xclusterquorum{'CustomSetQuorumToNodeAndDiskMajority':
       dsc_issingleinstance => 'Yes',
       dsc_type => 'NodeAndFileShareMajority',
       dsc_resource => $fileShareWitness,
@@ -19,13 +19,13 @@ class myclusterconfig inherits sqlserveralwayson::clusterconfig {
 
   }
   else {
-    dsc_xwaitforcluster{'SecondaryReplicaWaitForCluster':
+    dsc_xwaitforcluster{'CustomSecondaryReplicaWaitForCluster':
       dsc_name => $clusterName,
       dsc_retryintervalsec => 10,
       dsc_retrycount => 6
     }
 
-    dsc_xcluster{'JoinCluster':
+    dsc_xcluster{'CustomJoinCluster':
       dsc_name => $clusterName,
       dsc_staticipaddress => $clusterIP,
       dsc_domainadministratorcredential => '',
