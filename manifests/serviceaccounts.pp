@@ -21,7 +21,7 @@ class sqlserveralwayson::serviceaccounts inherits sqlserveralwayson {
 		dsc_account => $sqlservicecredential_username,
 		dsc_serviceprincipalname => "MSSQLSvc/${fqdn}",
 		dsc_ensure => present,
-		#dsc_psdscrunascredential => {'user' => $setup_svc_username, 'password' => $setup_svc_password},
+		dsc_psdscrunascredential => {'user' => $setup_svc_username, 'password' => $setup_svc_password},
 		require => Dsc_xaduser['SvcSQLAccount']
 	}
 
