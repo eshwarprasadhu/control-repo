@@ -16,14 +16,6 @@ class sqlserveralwayson::serviceaccounts inherits sqlserveralwayson {
 		require => Dsc_windowsfeature['RSAT-AD-Powershell']
 	}
 
-	#Configure MSSQLSvc SPN on SQL service account
-	#dsc_xadserviceprincipalname{'SvcSQLSPN':
-	#	dsc_account => $sqlservicecredential_username,
-	#	dsc_serviceprincipalname => "MSSQLSvc/${fqdn}",
-	#	dsc_ensure => present,
-	#	dsc_psdscrunascredential => {'user' => $setup_svc_username, 'password' => $setup_svc_password},
-	#	require => Dsc_xaduser['SvcSQLAccount']
-	#}
 
 	#SQL Agent service account creation (Active Directory)
 	dsc_xaduser{'SvcSQLAgentAccount':
