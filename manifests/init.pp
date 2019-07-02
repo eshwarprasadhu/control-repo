@@ -31,6 +31,10 @@ class sqlserveralwayson(
   $fileShareWitness, #Format '\\witness.company.local\witness$'
   $listenerIP, #The IP address used for the availability group listener, in the format 192.168.10.45/255.255.252.0.
   $role, ##primary or secondary
+  $installshareddir = 'C:\Program Files\Microsoft SQL Server',
+  $installsharedwowdir = 'C:\Program Files (x86)\Microsoft SQL Server',
+  $instancedir  =  'C:\Program Files\Microsoft SQL Server',
+  $installsqldatadir = 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data',
   )
 {
   #Using $domain fact du get the active directory domain name
