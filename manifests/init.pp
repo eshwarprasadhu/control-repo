@@ -35,6 +35,7 @@ class sqlserveralwayson(
   $installsharedwowdir = 'C:\Program Files (x86)\Microsoft SQL Server',
   $instancedir  =  'C:\Program Files\Microsoft SQL Server',
   $installsqldatadir = 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data',
+  $domainnetbiosname = 'NOUSINFO',
   )
 {
   #Using $domain fact du get the active directory domain name
