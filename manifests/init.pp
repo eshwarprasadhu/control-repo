@@ -36,11 +36,11 @@ class sqlserveralwayson(
   $instancedir  =  'C:\Program Files\Microsoft SQL Server',
   $installsqldatadir = 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data',
   $domainnetbiosname = 'NOUSINFO',
-  $asconfigdir  = 'C:\MSOLAP\Config'
-  $asdatadir = 'C:\MSOLAP\Data'
-  $aslogdir = 'C:\MSOLAP\Log'
-  $asbackupdir = 'C:\MSOLAP\Backup'
-  $astempdir = 'C:\MSOLAP\Temp'
+  $asconfigdir  = 'C:\MSOLAP\Config',
+  $asdatadir = 'C:\MSOLAP\Data',
+  $aslogdir = 'C:\MSOLAP\Log',
+  $asbackupdir = 'C:\MSOLAP\Backup',
+  $astempdir = 'C:\MSOLAP\Temp',
   )
 {
   #Using $domain fact du get the active directory domain name
