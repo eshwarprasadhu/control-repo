@@ -48,7 +48,7 @@ class sqlserveralwayson::install inherits sqlserveralwayson {
 	dsc_sqlsetup{ 'InstallSQLDefaultInstance':
 	    dsc_action => 'Install',
       dsc_instancename => 'MSSQLSERVER',
-      dsc_instanceid => 'MSSQL15.MSSQLSERVER',
+      dsc_instanceid => 'MSSQLSERVER',
       dsc_features => 'SQLENGINE,AS',
       dsc_sqlcollation => 'SQL_Latin1_General_CP1_CI_AS',
       dsc_securitymode => 'SQL',
