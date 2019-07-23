@@ -12,7 +12,7 @@ class sqlserveralwayson::clusterconfig inherits sqlserveralwayson {
     dsc_xclusterquorum{'SetQuorumToNodeAndCloudMajority':
       dsc_issingleinstance => 'Yes',
       dsc_type => 'NodeAndCloudMajority',
-      dsc_resource => $fileShareWitness,
+      dsc_resource => $cloudWitness,
       dsc_storageaccountaccesskey => $storageaccountkey,
       require => Dsc_xcluster['CreateFailoverCluster']
     }
