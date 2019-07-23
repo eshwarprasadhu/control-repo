@@ -13,7 +13,7 @@ class sqlserveralwayson::clusterconfig inherits sqlserveralwayson {
       dsc_issingleinstance => 'Yes',
       dsc_type => 'NodeAndCloudMajority',
       dsc_resource => $fileShareWitness,
-      dsc_storageaccountaccesskey => 'tVuGtuNmbwGeqYcS2r+9JyLjavECkGRPgEUPpN4sPrkQ5swbcrkjxBYzqIE1eh9EXCB63/HVxU3LuOxBxvIhPQ==',
+      dsc_storageaccountaccesskey => $storageaccountkey,
       require => Dsc_xcluster['CreateFailoverCluster']
     }
 
