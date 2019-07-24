@@ -6,7 +6,8 @@ class sqlserveralwayson::clusterconfig inherits sqlserveralwayson {
     dsc_xcluster{'CreateFailoverCluster':
       dsc_name => $clusterName,
       dsc_staticipaddress => $clusterIP,
-      dsc_domainadministratorcredential => {'user' => $setup_svc_username, 'password' => $setup_svc_password}
+      dsc_domainadministratorcredential => {'user' => $setup_svc_username, 'password' => $setup_svc_password},
+      require => Dsc_windowsfeature['RSATClusteringCmdInterface']
     }
 
     dsc_xclusterquorum{'SetQuorumToNodeAndCloudMajority':
