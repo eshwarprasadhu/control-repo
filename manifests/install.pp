@@ -29,15 +29,15 @@ class sqlserveralwayson::install inherits sqlserveralwayson {
   dsc_windowsfeature{'RSATClusteringPowerShell':
     dsc_ensure => 'Present',
     dsc_name   => 'RSAT-Clustering-PowerShell',
-    require => [ Dsc_windowsfeature['Failover-Clustering'] ]
+    require => [ Dsc_windowsfeature['RSATClusteringMgmt'] ]
   }
 
-  #Not working on Windows Server Core edition
-  #dsc_windowsfeature{'RSATClusteringMgmt':
-  #  dsc_ensure => 'Present',
-  #  dsc_name   => 'RSAT-Clustering-Mgmt',
-  #  require => [ Dsc_windowsfeature['Failover-Clustering'] ]
-  #}
+  #Note : Not working on Windows Server Core edition
+  dsc_windowsfeature{'RSATClusteringMgmt':
+    dsc_ensure => 'Present',
+    dsc_name   => 'RSAT-Clustering-Mgmt',
+    require => [ Dsc_windowsfeature['Failover-Clustering'] ]
+  }
 
   dsc_windowsfeature{'RSATClusteringCmdInterface':
     dsc_ensure => 'Present',
