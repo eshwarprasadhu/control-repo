@@ -19,6 +19,7 @@ package { 'xPSDesiredStateConfiguration':
 package { 'Pester':
   ensure   => latest,
   provider => 'windowspowershell',
+  skippublishercheck => true,
   source   => 'PSGallery',
 }
 
