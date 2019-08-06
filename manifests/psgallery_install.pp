@@ -23,8 +23,8 @@ package { 'PackageManagement':
 }
 
 package { 'Pester':
-  ensure   => latest,
-  provider => 'powershellcore',
+  ensure   => present,
+  provider => 'windowspowershell',
   source   => 'PSGallery',
 }
 
