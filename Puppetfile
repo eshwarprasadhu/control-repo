@@ -20,9 +20,13 @@ mod 'hbuckle-powershellmodule', '2.0.1'
 #  :git => 'https://github.com/npwalker/pe_code_manager_webhook',
 #  :ref => '9e167154b146901d7cfd3e67dc70e984796da03f'
 
-mod 'control-repo',
-  :git    => 'git@github.com:eshwarprasadhu/control-repo.git',
-  :branch => 'production'
+#mod 'control-repo',
+#  :git    => 'git@github.com:eshwarprasadhu/control-repo.git',
+#  :branch => 'production'
+
+mod 'devops_sqlserveralwayson',
+  :git    => 'git@github.com:eshwarprasadhu/devops_sqlserveralwayson.git',
+  :branch => 'master'
 
 #mod 'pltraining-rbac',
 #  :git    => 'https://github.com/puppetlabs/pltraining-rbac',
