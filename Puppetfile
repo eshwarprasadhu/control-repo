@@ -10,7 +10,6 @@ mod 'puppetlabs-dsc',         '1.9.2'
 mod 'puppetlabs-sqlserver',   '2.5.0'
 mod 'puppetlabs-reboot',      '2.1.2'
 mod 'puppetlabs-powershell',  '2.3.0'
-#mod 'virtualdesktopdevops-sqlserveralwayson', '2.0.0'
 mod 'hbuckle-powershellmodule', '2.0.1'
 
 # Modules from Github using various references
