@@ -25,7 +25,7 @@ mod 'hbuckle-powershellmodule', '2.0.1'
 #  :branch => 'production'
 
 mod 'devops_sqlserveralwayson',
-  :git    => 'git@github.com:eshwarprasadhu/devops_sqlserveralwayson.git',
+  :git    => 'https://github.com/eshwarprasadhu/devops_sqlserveralwayson',
   :branch => 'master'
 
 #mod 'pltraining-rbac',
