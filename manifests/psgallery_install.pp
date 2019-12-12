@@ -46,5 +46,11 @@ package { 'Posh-SSH':
   source   => 'PSGallery',
 }
 
+package { 'MSOnline':
+  ensure   => latest,
+  provider => 'windowspowershell',
+  source   => 'PSGallery',
+}
+
 }
 
