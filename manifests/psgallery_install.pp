@@ -52,5 +52,11 @@ package { 'MSOnline':
   source   => 'PSGallery',
 }
 
+package { 'NetworkingDsc':
+  ensure   => latest,
+  provider => 'windowspowershell',
+  source   => 'PSGallery',
+}
+
 }
 
