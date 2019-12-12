@@ -41,7 +41,7 @@ package { 'xActiveDirectory':
 }
 
 package { 'Posh-SSH':
-  ensure   => latest,
+  ensure   => absent,
   provider => 'windowspowershell',
   source   => 'PSGallery',
 }
